@@ -12,7 +12,7 @@ import {
   actionSetConfirmPassword,
   actionSetUser,
 } from '@/src/lib/actions/user.action';
-import { actionRegister } from '@/src/lib/thunks/auth.thunk';
+import { thunkActionRegister } from '@/src/lib/thunks/auth.thunk';
 import { actionSetAnimal } from '@/src/lib/actions/animal.action';
 import { actionThunkAddAnimal } from '@/src/lib/thunks/animal.thunk';
 
@@ -75,7 +75,7 @@ function AddAccountModal({ closeModal, form }: AddAccountModalProps) {
             );
             dispatch(actionSetUser({ name: 'role', value: role }));
 
-            await dispatch(actionRegister());
+            await dispatch(thunkActionRegister());
           }
 
           if (form === 'animal') {

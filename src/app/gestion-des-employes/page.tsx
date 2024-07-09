@@ -7,8 +7,6 @@ import AddAccountModal from '../components/AddAccountModal/AddAccountModal';
 
 import './page.scss';
 import { useAppDispatch, useAppSelector } from '@/src/lib/hooks';
-import { actionLogIn } from '@/src/lib/actions/auth.action';
-import { addTokenJwtToAxiosInstance } from '@/src/lib/axios/axios';
 import {
   actionThunkUserList,
   actionUserSoftDelete,
